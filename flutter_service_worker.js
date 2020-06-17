@@ -1,19 +1,21 @@
 'use strict';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "/assets\AssetManifest.json": "801125fca546f506babac9af4ec061ba",
-"/assets\FontManifest.json": "18eda8e36dfa64f14878d07846d6e17f",
-"/assets\fonts\MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"/assets\LICENSE": "0f14d60a1f3cfc527f112c4c272dc474",
-"/assets\packages\cupertino_icons\assets\CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
-"/assets\packages\font_awesome_flutter\lib\fonts\fa-brands-400.ttf": "3ca122272cfac33efb09d0717efde2fa",
-"/assets\packages\font_awesome_flutter\lib\fonts\fa-regular-400.ttf": "bdd8d75eb9e6832ccd3117e06c51f0d3",
-"/assets\packages\font_awesome_flutter\lib\fonts\fa-solid-900.ttf": "d21f791b837673851dd14f7c132ef32e",
-"/icons\Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"/icons\Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"/index.html": "1238c6882e8baed2d8162918a0f1b2a8",
-"/main.dart.js": "ed3c9c377fabd09cc5f3946a777de1dd",
-"/manifest.json": "ca6540c708ae3cabcf4d56f18e7f7d12"
+  "assets/AssetManifest.json": "fe3c9a3e40134be73f6e7c639b21527b",
+"assets/FontManifest.json": "75b58514d74acf943d13f2c9368dca54",
+"assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
+"assets/fonts/MyPgmIcons.ttf": "9f4e3596ab22873ed8d1ff5acd19bb52",
+"assets/LICENSE": "35dc9c98fc2b271f53f766ebdd3a946d",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "5a37ae808cf9f652198acde612b5328d",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "2bca5ec802e40d3f4b60343e346cedde",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "2aa350bd2aeab88b601a593f793734c0",
+"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
+"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
+"index.html": "53a8c0bd8c05a97b367f10ea6504cad6",
+"/": "53a8c0bd8c05a97b367f10ea6504cad6",
+"main.dart.js": "fc6aaf56c8472886baa67542ccf7ce6f",
+"manifest.json": "685cca063d7451e13864dfedb4029c2e"
 };
 
 self.addEventListener('activate', function (event) {
@@ -35,9 +37,7 @@ self.addEventListener('fetch', function (event) {
         if (response) {
           return response;
         }
-        return fetch(event.request, {
-          credentials: 'include'
-        });
+        return fetch(event.request);
       })
   );
 });

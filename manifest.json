@@ -1,11 +1,11 @@
 {
-    "name": "n4ze3m",
+    "name": "Muhammed Nazeem",
     "short_name": "n4ze3m",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Portfolio of Muhammed Nazeem",
+    "description": "Dart & Python Developer. Studying at KTU UNI (CSE).Passionate about developing technology & Juventus.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
